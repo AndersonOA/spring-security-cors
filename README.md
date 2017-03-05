@@ -19,7 +19,8 @@ Sistema todo desaclopado, sendo apenas uma API REST onde a View pode ser em outr
 
 Abaixo deixo o código do html utilizado para testes dessa API.
 
-<html>
+<code>
+	<html>
 	<head>
 		<title>Teste</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -50,3 +51,5 @@ Abaixo deixo o código do html utilizado para testes dessa API.
 
 	</body>
 </html>
+
+</code>
