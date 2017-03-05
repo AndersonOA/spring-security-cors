@@ -17,7 +17,7 @@ Sistema todo desaclopado, sendo apenas uma API REST onde a View pode ser em outr
 
 ### Exemplo de consumir essa API utilizando jQuery AJAX ###
 
-Abaixo deixo o código jQuery do html utilizado para testes dessa API.
+Abaixo deixo o código html utilizado para testes dessa API.
 
 ```html
 <html>
