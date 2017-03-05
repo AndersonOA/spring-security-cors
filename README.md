@@ -14,3 +14,39 @@ Sistema todo desaclopado, sendo apenas uma API REST onde a View pode ser em outr
 ### View em simples HTML com jQuery ###
 * HTML;
 * jQuery;
+
+### Exemplo de consumir essa API utilizando jQuery AJAX ###
+
+Abaixo deixo o código do html utilizado para testes dessa API.
+
+<html>
+	<head>
+		<title>Teste</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			var settings = {
+			  "async": true,
+			  "crossDomain": true,
+			  "url": "http://localhost:8080/spring-rest-api/api/v1/regra-acesso",
+			  "method": "POST",
+			  "headers": {
+			    "content-type": "application/json",
+			    "authorization": "Basic YWRtaW46c2FsbW9zODk=",
+			    "cache-control": "no-cache"
+			  },
+			  "xhrFields": {
+			       "withCredentials": true
+			    },
+			  "processData": false,
+			  "data": "{\n\t\"nome\": \"CLIENTE4\"\n}"
+			}
+
+			$.ajax(settings).done(function (response) {
+			  console.log(response);
+			});
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
