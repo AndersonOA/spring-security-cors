@@ -19,25 +19,23 @@ Sistema todo desaclopado, sendo apenas uma API REST onde a View pode ser em outr
 
 Abaixo deixo o código jQuery do html utilizado para testes dessa API.
 
-<script type="text/javascript">
-	var settings = {
-	  "async": true,
-	  "crossDomain": true,
-	  "url": "http://localhost:8080/spring-rest-api/api/v1/regra-acesso",
-	  "method": "POST",
-	  "headers": {
-	    "content-type": "application/json",
-	    "authorization": "Basic YWRtaW46c2FsbW9zODk=",
-	    "cache-control": "no-cache"
-	  },
-	  "xhrFields": {
-	       "withCredentials": true
-	    },
-	  "processData": false,
-	  "data": "{\n\t\"nome\": \"CLIENTE4\"\n}"
-	}
+var settings = {
+"async": true,
+"crossDomain": true,
+"url": "http://localhost:8080/spring-rest-api/api/v1/regra-acesso",
+"method": "POST",
+"headers": {
+"content-type": "application/json",
+"authorization": "Basic YWRtaW46c2FsbW9zODk=",
+"cache-control": "no-cache"
+},
+"xhrFields": {
+"withCredentials": true
+},
+"processData": false,
+"data": "{\n\t\"nome\": \"CLIENTE4\"\n}"
+}
 
-	$.ajax(settings).done(function (response) {
-	  console.log(response);
-	});
-</script>
+$.ajax(settings).done(function (response) {
+console.log(response);
+});
