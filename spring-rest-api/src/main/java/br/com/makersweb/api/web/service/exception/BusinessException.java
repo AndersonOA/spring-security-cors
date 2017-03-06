@@ -15,6 +15,8 @@ public class BusinessException extends RuntimeException {
 	 */
 	private static final long serialVersionUID = -1231483272479216565L;
 
+	private Object object;
+
 	/**
 	 * 
 	 */
@@ -30,6 +32,11 @@ public class BusinessException extends RuntimeException {
 		super(message, cause);
 	}
 
+	public BusinessException(Throwable cause, Object object) {
+		super(cause);
+		this.object = object;
+	}
+
 	/**
 	 * @param message
 	 */
@@ -42,6 +49,13 @@ public class BusinessException extends RuntimeException {
 	 */
 	public BusinessException(String message, Boolean error, String typeError) {
 		super(message);
+	}
+
+	/**
+	 * @return the object
+	 */
+	public Object getObject() {
+		return object;
 	}
 
 }
